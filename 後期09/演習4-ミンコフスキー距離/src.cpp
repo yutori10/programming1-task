@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <algorithm>
 using namespace std;
 //わかんない
 
@@ -26,7 +27,9 @@ int main() {
         answer[p-1] = D;
     }
 
-    for(int i=0;i<3;i++) {
+    answer[3] = abs(*max_element(x_array, x_array+n)-*max_element(y_array, y_array+n));
+
+    for(int i=0;i<4;i++) {
         cout << answer[i] << endl;
     }
 
